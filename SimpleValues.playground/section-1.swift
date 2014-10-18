@@ -25,5 +25,19 @@ let oranges = 5
 let appleSummary = "I have \(apples) apples."
 let fruitSummary = "I have \(apples + oranges) pieces of fruit."
 
+var shoppingList = ["catfish", "water", "tulips", "blue paint"]
+shoppingList[1] = "bottle of water"
 
+var occupation = [
+    "Malcolm" : "Captain",
+    "Kaylee" : "Mechanic",
+]
+
+occupation["Jayne"] = "Public Relations"
+
+let emptyArray = [String]()
+let emptyDictionary = [String: Float]()
+
+shoppingList = []
+occupation = [:]
 
