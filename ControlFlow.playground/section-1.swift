@@ -17,3 +17,16 @@ for score in individualScores {
 }
 
 teamScore
+
+
+// use if and let together to work with values that might be missing.
+var optionalString: String? = "Hello"
+optionalString == nil // not nil
+
+var optionalName: String? = "John Appleseed"
+var greeting = "Hello"
+if let name = optionalName {
+    greeting = "Hello, \(name)"
+} else {
+    println("optionalName is nil.")
+}
