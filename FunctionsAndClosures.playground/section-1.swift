@@ -25,3 +25,55 @@ let statistics = calculateStatistics([5, 3, 100, 3, 9])
 statistics.sum
 statistics.2
 // Use tuple to return a compound value
+
+func sumOf(numbers: Int...) -> Int {
+    var sum = 0
+    for number in numbers {
+        sum += number
+    }
+    return sum
+}
+sumOf()
+sumOf(42, 597, 12)
+
+func averageOf(numbers: Float...) -> Float {
+    var sum:Float = 0
+    var count = 0
+    for number in numbers {
+        count += 1
+        sum += number
+    }
+    if count == 0 {
+        return 0.0
+    } else {
+        return sum/Float(count)
+    }
+}
+averageOf(42, 597, 12)
+//
+
+
+func returnFifteen() -> Int {
+    var  y = 10
+    func add() {
+        y += 5
+    }
+    add()
+    return y
+}
+returnFifteen()
+// Functions can be nested.
+
+
+func makeIncrementer() -> (Int -> Int) {
+    func addOne(number: Int) -> Int {
+        return number + 1
+    }
+    return addOne
+}
+var increment = makeIncrementer()
+increment(7)    // How?
+// Could not figure how this works...
+// NO input param in function makeIncrementer...
+// and the "return addOne" without brackets...
+
